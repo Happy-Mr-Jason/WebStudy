@@ -6,6 +6,16 @@
 	<body>
 		<h1 style = "font-size : 50pt;">My First Heading</h1> //헤드용 문장을 표현해줄때 h1~h6 까지 Tag를 사용한다.
 		<p>My First Pharagraph</p> // 문단을 정의할 때 사용한다.
-		<a href="https://www.naver.com">네이버</a> //하이퍼링크를 만들어 준다.
+		<a href="https://www.naver.com">네이버</a> //하이퍼링크를 만들어 준다. target으로 내부 사이트인지 외부 사이트인지 나눠 주는 것이 좋다. 내부 사이트인 경우 _self, 외부 사이트인 경우 _blank
 	</body>
 </html>
+
+
+!!!!참조문서 위치
+https://www.w3schools.com/html/html_basic.asp
+https://www.w3schools.com/html/html_elements.asp
+https://www.w3schools.com/tags/default.asp
+
+!!!!Tag 사용요령
+<태그명 속성명 = "값">   // 속성값은 ""로 묶어준다.
+<Img /><br /> 등의 태그에는 </> 처리를 하지 않아도 단독으로 사용 가능하다. 반드시 />로 마무리 한다.
