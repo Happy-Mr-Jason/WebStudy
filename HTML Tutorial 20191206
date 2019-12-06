@@ -1,0 +1,11 @@
+<!DOCTYPE html>  //html 문서임을 명시한다.
+<html>  //html문서의 시작
+	<head>
+		<title>Hello World</title>  //html 의 문서 타이틀이며 사이트에 공개 될때나 북마크에 제공되는 문장이다.
+	</head>
+	<body>
+		<h1 style = "font-size : 50pt;">My First Heading</h1> //헤드용 문장을 표현해줄때 h1~h6 까지 Tag를 사용한다.
+		<p>My First Pharagraph</p> // 문단을 정의할 때 사용한다.
+		<a href="https://www.naver.com">네이버</a> //하이퍼링크를 만들어 준다.
+	</body>
+</html>
