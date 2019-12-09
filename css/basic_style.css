@@ -1,4 +1,20 @@
-﻿h1 {color:green;}
-p {background-color:#cccccc;
+﻿/*주석 달기*/
+/* Color Table
+  Main Color : Green
+  Focus Color : tomato
+  Main Background Color : #b1f2b1
+
+*/
+*{
+	margin:0;
+	padding:0;
+}
+h1 {color:green;
+	font-size:30px;
+	border-top : 3px dotted blue;
+	border-bottom:3px solid green;
+	margin:10px;
+}
+p {margin:10px;
    padding:20px;
 }
