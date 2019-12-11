@@ -1,20 +1,51 @@
 ﻿/*주석 달기*/
 /* Color Table
-  Main Color : Green
-  Focus Color : tomato
-  Main Background Color : #b1f2b1
+ Main Color : Green
+ Focus Color : tomato
+ Main Background Color : #b1f2b1
+ */
+h1 {
+	color: green;
+	font-size: 30px;
+	border-top: 3px dotted blue;
+	border-bottom: 3px solid green;
+	margin: 10px;
+}
+p {
+	margin: 10px;
+}
+table {
+	margin: 20px;
+	border-collapse: collapse;
+	width: 80%;
+	text-align: center;
+	border-top: 3px solid green;
+	border-bottom: 3px solid green;
+}
+caption {
+	caption-side: top;
+}
+th {
+	border-bottom: 3px solid green;
+	padding: 5px;
+	background-color: #b1f2b1;
+}
+td {
+	border-bottom: 1px solid red;
+	padding: 5px;
+}
+thead {
+	background-color: #b1f2b1;
+	font-weight: bold;
+	text-align: center;
+	border-bottom: 3px double green;
+}
+tbody {
 
-*/
-*{
-	margin:0;
-	padding:0;
 }
-h1 {color:green;
-	font-size:30px;
-	border-top : 3px dotted blue;
-	border-bottom:3px solid green;
-	margin:10px;
-}
-p {margin:10px;
-   padding:20px;
+tfoot {
+	background-color: #49b949;
+	font-weight: bold;
+	color: white;
+	border-top: 3px double green;
 }

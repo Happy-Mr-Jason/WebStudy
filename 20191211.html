@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html lang = "ko">
+	<head>
+		<meta charset = "utf-8">
+		<title>기관명 - 문서명</title>
+		<link rel="stylesheet" type="text/css" href="css/basic_style.css">
+		<style>
+			table#test {
+				border: 1px solid;
+				border-collapse: separate;
+				border-spacing: 5px;
+			}
+			table#test td {
+				border: 1px solid;
+				empty-cells: hide;
+				width:200px;
+			}
+		</style>
+	</head>
+	<body>
+		<dl>
+			<dt>
+				1절
+			</dt>
+			<dd>
+				애국가 1절입니다.
+			</dd>
+			<dt>
+				2절
+			</dt>
+			<dd>
+				애국가 2절입니다.
+			</dd>
+			<dt>
+				3절
+			</dt>
+			<dd>
+				애국가 3절입니다.
+			</dd>
+			<dt>
+				4절
+			</dt>
+			<dd>
+				애국가 4절입니다.
+			</dd>
+		</dl>
+		<table>
+			<caption>
+				<strong>학생 성적표</strong>
+				<p style="margin:0 0 10px 0">
+					<small>(2019-12-11)</small>
+				</p>
+			</caption>
+			<tr>
+				<th colspan="5"> 1학년 1반</th>
+			</tr>
+			<tr>
+				<th>순번</th>
+				<th>이름</th>
+				<th>국어</th>
+				<th>영어</th>
+				<th>수학</th>
+			</tr>
+			<tr>
+				<th>1</th>
+				<td>홍길동</td>
+				<td>70점</td>
+				<td>80점</td>
+				<td>60점</td>
+			</tr>
+			<tr>
+				<th>2</th>
+				<td>김영희</td>
+				<td>50점</td>
+				<td>40점</td>
+				<td>70점</td>
+			</tr>
+			<tr>
+				<th>3</th>
+				<td>이철수</td>
+				<td>90점</td>
+				<td>50점</td>
+				<td>60점</td>
+			</tr>
+			<tr>
+				<th>4</th>
+				<td>이성진</td>
+				<td>100점</td>
+				<td>100점</td>
+				<td>100점</td>
+			</tr>
+			<tr>
+				<th rowspan="2">비고</th>
+				<td colspan="4">
+				<center>
+					참고사항1
+				</center></td>
+			</tr>
+			<tr>
+				<td colspan="4">
+				<center>
+					참고사항2
+				</center></td>
+			</tr>
+		</table>
+		</br>
+		<p id="summary">
+			다음 표는 개인 정보 서식 입니다.
+		</p>
+		<figure>
+			<figcaption>
+				<strong>개인정보</strong>
+			</figcaption>
+			<table style="margin:20px auto 0px;" aria-describedby="summary">
+				<tr>
+					<th width="10%">이름</th>
+					<td width="30%"></td>
+					<th width="10%">연락처</th>
+					<td width="30%"></td>
+				</tr>
+				<tr>
+					<th>주소</th>
+					<td colspan="3"></td>
+				</tr>
+				<tr>
+					<th>자기
+					<br>
+					소개</th>
+					<td colspan="3"></td>
+				</tr>
+			</table>
+			<figcaption style="text-align:center;">
+				<strong>!!주의 : 주소는 도로명으로 표기할 것</strong>
+			</figcaption>
+		</figure>
+		</br>
+		<table>
+			<thead>
+				<tr>
+					<td>이름</td>
+					<td>국어</td>
+					<td>영어</td>
+					<td>수학</td>
+				</tr>
+			</thead>
+			<tbody>
+				<colgroup>
+					<col style="background-color: yellow; border-right: 1px dotted green"/>
+					<col span="3" style="border-right: 1px dotted green"/>
+				</colgroup>
+				<tr>
+					<td>홍길동</td>
+					<td>70점</td>
+					<td>80점</td>
+					<td>60점</td>
+				</tr>
+				<tr>
+					<td>김영희</td>
+					<td>50점</td>
+					<td>40점</td>
+					<td>70점</td>
+				</tr>
+				<tr>
+					<td>이철수</td>
+					<td>90점</td>
+					<td>50점</td>
+					<td>60점</td>
+				</tr>
+				<tr>
+					<td>이성진</td>
+					<td>100점</td>
+					<td>100점</td>
+					<td>100점</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td>총계</td>
+					<td>310점</td>
+					<td>270점</td>
+					<td>290점</td>
+				</tr>
+			</tfoot>
+		</table>
+		<table id="test">
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td></td>
+				<td>7</td>
+				<td>8</td>
+			</tr>
+			<tr>
+				<td>9</td>
+				<td>10</td>
+				<td></td>
+				<td>12</td>
+			</tr>
+			<tr>
+				<td>13</td>
+				<td>14</td>
+				<td>15</td>
+				<td>16</td>
+			</tr>
+		</table>
+	</body>
+</html>
