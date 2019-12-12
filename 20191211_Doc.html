@@ -1,0 +1,96 @@
+﻿테이블 만들기
+
+1. <table></table> : 표 만들기
+1.1 css
+	border
+	border-collapse : 표의 바깥 테두리와 셀의 각 테두리 간격 조절
+		- collapse : 합치기
+		- separate : 떨어지게 표시(초기값)
+	border-spacing:크기	셀 테두리 간격 조절
+	width
+	height
+	table-layout : 컨텐츠에 맞게 셀 너비를 지정
+		- fixed : 셀 너비 고정, 셀의 너비가 지정되지 않은 경우 균등 배분.
+		- auto : 내용에 따라 셀너비가 변경(default)
+
+2. <tr></tr> : table row. 표의 행 정의
+
+3. <td></td> : table data. 표의 각 셀
+3.1 css
+	border
+	empty-cells : 내용이 없는 빈셀<td></td>의 표시여부를 결정
+		- show : 칸을 보여줌(default)
+		- hide : 칸을 감춤
+	text-align : 셀 안의 텍스트 가로방향 정렬
+		-left
+		-right
+		-center
+	vertical-align : 셀 안의 수직방향 정렬
+		- baseline
+		- top
+		- middle
+		- bottom
+		
+3.2	속성
+	colspan = "합칠 셀 갯수"
+	rowspan = "합칠 셀 갯수"
+	
+4. <th></th> : table header. 표 셀 중 열제목, 행제목. 문자가 굵게 표시, 가운데 정렬
+4.1 css
+	border
+	
+5. <caption></caption> 	: table 제목. <table>태그 안에 정의. 상단 중앙 배치
+	컨테이너 객체
+5.1 css
+	caption-side:top | bottom	캡션의 위치
+
+용법
+<table>
+	<caption></caption>
+	<tr>
+		<td></td> // <th></th>
+		<td></td>
+		<td></td>
+	</tr>
+	...
+</table>
+
+6. <figure></figure>:설명대상 지정. 컨테이너 객체
+7. <figcaption></figcaption> : 설명 부분
+용법
+<figure>
+	<figcaption>설명</figcaption>
+	설명대상
+	<figcaption>설명</figcaption>
+</figure>
+
+표의 시멘틱테그
+1. <thead></thead> : 표의 열제목 부분을 의미
+2. <tbody></tbody> : 표의 내용(본문)을 의미
+3. <tfoot></tfoot> : 표의 요약을 의미
+
+스타일 지정 관련 태그
+1. <col> : 한개의 열에 스타일을 적용
+1.2 속성
+	span : 연속 열을 지정하여 스타일을 적용
+	
+2. <colgroup> : <col>들을 묶어주는 컨테이너. <table>안 상단에서 정의
+	주의 : 표의 칼럼수와 <col>의 수가 동일(span 합산해서)
+용법
+<colgroup> //표의 컬럼이 총 4개인 경우
+	<col>
+	<col span="2">
+	<col>
+</colgroup>
+
+
+
+
+
+
+
+
+
+
+
+
