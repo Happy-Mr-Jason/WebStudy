@@ -1,0 +1,126 @@
+Chapter 4. 폼 만들기 - Chapter04.html
+
+1. 만들기
+	- 폼 사용자가 입력한 내용을 서버 쪽 프로그램으로 전송 할때 사용한다.
+1.1 <form></form> : 폼의 영역 지정 컨테이너.
+<form method="데이터를 전송할 방법" action="데이터를 전송할 경로">
+	폼 관련 요소들..........
+	<input type="submit"/>
+</form>
+
+1.1.1 속성
+	- method : 전송 방법
+		- get : url과 함께 전송. 전송값이 노출(디버깅용도로 많이 사용됨)
+		- post : 본문에 포함되어 전송. 전송값이 노출 되지 않음. (대부분 이 방식을 사용)
+	- name : 폼의 이름 정의. 폼들간의 구분자
+	- action : 데이터 전송처 URL(CGI 프로그램 파일명)
+	- target : <a></a>의 target과 동일
+	- autocomplete : 자동완성 기능 on/off
+		- on(default), off 
+		
+1.2 <label></label> : input의 라벨링을 해준다, 마우스 타게팅을 원할하게 하기 위한 용도로 사용된다.
+<label>
+	레이블내용<input/>
+</label>
+
+<label for="id명">레이블 내용</label>
+<input id="id명"/>
+
+1.3 <fieldset></fieldset> : form 안의 요소의 구획을 나눠줌
+1.4 <legend></legend> : fieldset의 제목 표시, fieldset안에 정의
+<fieldset>
+	<legend></legend>
+</fieldset>
+
+2. input 태크
+2.1 <input /> : form안에 입력 서식 요소, type 속성에 따라 표현방법이 달라진다.
+<input type="컨트롤종류" name="전송필드명" />
+
+2.1.1 속성
+	- id : 글로벌속성, 다른요소에서 지정할 구분자. css, javascript 용 선택 도구, 유일해야 한다.
+	- type : 입력 형태(모양) 정의 (교재 151페이지~ 참조)
+	- name : 전송시 필드명
+	
+2.2 type = "hidden" : 숨김 필드, 전송값을 지녀야 한다.
+<input type="hidden" name="필드명" value="전송값"/>
+
+2.3 type = "text" : 텍스트 필드.
+2.3.1 text 관련 속성
+	- size : 텍스트 필드의 길어, 보여질 글자의 수(size보다 긴 문자를 넣으면 뒤 문자는 가려진다.)
+	- maxlength : 최대 입력 문자 크기.(제한사항)
+	- value : 입력값(전송될 값), 속성을 지정하면 Default 표시값
+	
+2.4 type = "password" : 비밀번호 입력란
+
+2.5 분화된 텍스트 필드
+	- type = "search" : 검색창, 크롬, 엣지 등에는 삭제기능이 나옴
+	- type = "url" : url 입력창. 반드시 http:// https:// 시작하게 함.
+	- type = "email" : 이메일 입력창. 이메일 포멧 확인(첫글자 영어로 시작. 중간에 @있는지?)
+	- type = "tel" : 전 화번호. 검사기능 없음. 모바일에서 전화번호키보드가 나타나게 함.
+	
+2.6 type = "number" : 숫자 입력란 max, min 속성값 입력에 의한 유효성 검사
+2.6.1 number 관련 속성
+	- min : 최소값
+	- max : 최대값
+	- step : 증감량
+	- value : 초기값
+
+2.7 type = "range" : number 대신 막대로 숫자값 입력
+
+2.8 type = "radio" : 단일 선택용 / type = "checkbox" : 다중 선택 가능
+2.8.1 radio / checkbox 관련 속성값
+	- name : 필드명 지정(묶음)
+	- checked :  속성이 지정되면 체크된 상태로 표시
+	
+2.9 type = "color" : 색상 선택 상자. value : 16진수 표기법(#ffffff)
+
+2.10 날짜 관련
+2.10.1 type = "date" : 날짜(년, 월, 일) 선택용 -> yyyy-mm-dd
+2.10.2 type = "month" : 월(년, 월) 선택용 -> yyyy-mm
+2.10.3 type = "week" : 주(년, 주) 선택용 -> yyyy-W00
+
+2.11 시간 관련
+2.11.1 type = "time" : 시간지정 -> hh:mm
+2.11.2 type = "datetime" : 날짜와 시간 지정(국제표준시 기준) -> yyyy-mm-ddThh:mm
+2.11.3 type = "datetime-local" : 날짜와 시간 지정(지역표준시 기준) -> yyyy-mm-ddThh:mm
+2.11.4 관련 속성
+	- min : 최소값
+	- max : 최대값
+	- step : 증감량
+	- value : 초기값
+
+2.12 폼 조절 버튼
+2.12.1 type = "submit" : 전송, 폼안의 input요소의 name=value값을 action="경로" 로 전송 
+2.12.2 type = "reset" : 폼 안의 input 요소를 초기화 초기 value속성이 설정되었다면 value값으로 되돌린다.
+2.12.3 관련 속성
+	- value : 전송값이 아니고 버튼의 문자(caption)를 나타나게 한다.
+
+2.13 type = "image" : submit 버튼을 이미지버튼으로 넣기
+<input type="image" src="경로" alt="대체 텍스트"/>
+
+2.14 type = "button" : submit, reset 버튼 이외의 다른 용도의 버튼을 만들고자 할때
+<input type="button" value="버튼명" onclick="window.open()"/>
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

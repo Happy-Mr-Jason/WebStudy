@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<title>Chapter04</title>
+		<meta name="description" content="" />
+		<meta name="author" content="user" />
+		<style>
+			ul{
+				list-style: none;
+			}
+			ul li{
+				margin: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="login.php" method="get">
+			<fieldset>
+				<ul>
+					<li>
+						<label>아이디<input type="text" id="userid" name="id" /></label>
+					</li>
+					<li>
+						<label for="#ipass">비밀번호</label>
+						<input type="password" id="ipass" name="pass"/>
+					</li>
+					<li>
+						<input type="submit""/>
+					</li>
+				</ul>
+			</fieldset>
+		</form>
+		<form method="get" action="test1.php">
+			<fieldset>
+				<legend>수강분야(다수 선택 가능)</legend>
+				<ul>
+					<li><input type="checkbox" name="part" value="grm" />문법</li>
+					<li><input type="checkbox" name="part" value="wr" />작문</li>
+					<li><input type="checkbox" name="part" value="rd" />독해</li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend>수강과목(1과목만 선택 가능)</legend>
+				<ul>
+					<li><label><input type="radio" name="subject" value="eng" />영어회화</label></li>
+					<li><label><input type="radio" name="subject" value="ch" />중국어회화</label></li>
+					<li><label><input type="radio" name="subject" value="jp" />일본어회화</label></li>
+				</ul>
+			</fieldset>
+			<input type="submit"/>
+		</form>
+		<form method="get" action="test.php">
+			<input type="hidden" name="serial_number" value="123" />
+			<input type="text" name="field1" size="10" maxlength="15" value="00000"/><br />
+			url : <input type="url" /><br />
+			email : <input type="email" /><br />
+			tel : <input type="tel" /><br />
+			수량 : <input type="number" min="1" max="50" step="5"/><br />
+			수량 : <input type="range" min="1" max="50" step="5"/><br />
+			색상 : <input type="color" name="color"/><br />
+			날짜 : <input type="date" name="date"/><br />
+			월 : <input type="month" name="month"/><br />
+			주 : <input type="week" name="week"/><br />
+			시간 : <input type="time" name="time"/><br />
+			표준시 : <input type="datetime" name="datetime"/><br />
+			지역표준시 : <input type="datetime-local" name="datetimelocal"/><br />
+			<input type="image" src="images/Example003.svg" alt="나무야"/><br />
+			<input type="button" value="새창 만들기" onclick="window.open()"/><br />
+			
+			<input type="submit" value="보내기"/><input type="reset" value="다시입력"/><br />
+		</form>
+		<form method="get" action="search.php">
+			<input type="search" name="search"/><input type="submit" value="검색"/><br />
+		</form>
+	</body>
+</html>
