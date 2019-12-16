@@ -36,9 +36,12 @@
 			<fieldset>
 				<legend>수강분야(다수 선택 가능)</legend>
 				<ul>
-					<li><input type="checkbox" name="part" value="grm" />문법</li>
-					<li><input type="checkbox" name="part" value="wr" />작문</li>
-					<li><input type="checkbox" name="part" value="rd" />독해</li>
+					<input type="text" list="listpart" name="part"/>
+					<datalist id="listpart">
+						<option value="grm" label="문법"></option>
+						<option value="wr" label="작문"></option>
+						<option value="rd" label="독해"></option>
+					</datalist>
 				</ul>
 			</fieldset>
 			<fieldset>
@@ -81,6 +84,22 @@
 		</form>
 		<form method="get" action="search.php">
 			<input type="search" name="search"/><input type="submit" value="검색"/><br />
+			
+		</form>
+		<form oninput="result.value=parseInt(num1.value) + parseInt(num2.value)">
+			<input type="number" name="num1" value="0">
+			+ <input type="number" name="num2" value="0">
+			= <output name="result" for="num"></output>
+		</form>
+		<form>
+			<progress value="50" max="100"></progress>
+		</form>
+		<form>
+			<ul>
+				<li>작은값 : <meter min="0" max="100" low="30" optimum="50" high="70" value="20"</li>
+				<li>적합값 : <meter min="0" max="100" low="30" optimum="50" high="70" value="55"</li>
+				<li>큰    값 : <meter min="0" max="100" low="30" optimum="50" high="70" value="80"</li>
+			</ul> 
 		</form>
 	</body>
 </html>

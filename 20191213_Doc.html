@@ -40,6 +40,8 @@ Chapter 4. 폼 만들기 - Chapter04.html
 	- id : 글로벌속성, 다른요소에서 지정할 구분자. css, javascript 용 선택 도구, 유일해야 한다.
 	- type : 입력 형태(모양) 정의 (교재 151페이지~ 참조)
 	- name : 전송시 필드명
+	- autofocus : 폼 로딩시 첫번째 포커스 위치
+	- required : 필수 입력 항목
 	
 2.2 type = "hidden" : 숨김 필드, 전송값을 지녀야 한다.
 <input type="hidden" name="필드명" value="전송값"/>
@@ -47,8 +49,11 @@ Chapter 4. 폼 만들기 - Chapter04.html
 2.3 type = "text" : 텍스트 필드.
 2.3.1 text 관련 속성
 	- size : 텍스트 필드의 길어, 보여질 글자의 수(size보다 긴 문자를 넣으면 뒤 문자는 가려진다.)
+	- minlength : 최소 입력 문자 크기.(제한사항)
 	- maxlength : 최대 입력 문자 크기.(제한사항)
 	- value : 입력값(전송될 값), 속성을 지정하면 Default 표시값
+	- placeholder : 텍스트 입력시 도움말 표시, 컨트롤 클릭시 사라지며, value 또는 default값이 아님을 주의.
+	- readonly : 일기 전용, 값은 있으며, 전송도 됨, 쓰기 및 수정이 안됨.
 	
 2.4 type = "password" : 비밀번호 입력란
 
@@ -91,6 +96,8 @@ Chapter 4. 폼 만들기 - Chapter04.html
 
 2.12 폼 조절 버튼
 2.12.1 type = "submit" : 전송, 폼안의 input요소의 name=value값을 action="경로" 로 전송 
+2.12.1.1 관련속성
+	- formaction = "전송 경로" : 폼의 내용을 전송 경로로 전송. <form action="경로">로 name</form>
 2.12.2 type = "reset" : 폼 안의 input 요소를 초기화 초기 value속성이 설정되었다면 value값으로 되돌린다.
 2.12.3 관련 속성
 	- value : 전송값이 아니고 버튼의 문자(caption)를 나타나게 한다.
@@ -99,16 +106,85 @@ Chapter 4. 폼 만들기 - Chapter04.html
 <input type="image" src="경로" alt="대체 텍스트"/>
 
 2.14 type = "button" : submit, reset 버튼 이외의 다른 용도의 버튼을 만들고자 할때
-<input type="button" value="버튼명" onclick="window.open()"/>
+<input type="button" value="버튼명" onclick="자바스크립트 함수"/>
 
+2.15 type = "file" : 파일 첨부(경로 선택)
+2.15.1 관련속성
+	- multiple : 파일을 다수개 선택 가능. <select></select>에도 적용 가능
 	
+3. 나열 데이터용 컨트롤 만들기(목록, 콤보)
+3.1 select, optgroup, option - 드롭다운 목록 만들기
+3.1.1 <select></select> : 옵션 그룹의 범위
+3.1.1.1 속성
+	- size : dropdown-listbox -> listbox 로 변형되고, 표시될 목록의 갯수
+	- multiple : 여러 개의 옵션이 함께 표시되며 Ctrl키를 눌러 여러 항목을 선택할 수 있다. 
 
+3.1.2 <optgroup></optgroup> : 선택사항. 옵션 묶기용
+3.1.2.1 속성
+	- label : 그룹명, 전송값 아님
 
+3.1.3 <option></option> : 나열될 목록
+3.1.3.1 속성
+	- value : 서버로 전송될 값을 지정
+	- selected : 기본으로 선택되어 있는 항목 지정
 
+구문
+<select name="이름">
+	<optgroup label="그룹명">
+		<option value="값1">옵션이름 1</option>
+		<option value="값2">옵션이름 2</option>
+		<option value="값3">옵션이름 3</option>
+	</optgroup>
+	...
+</select>
+전송되는 내용 -> select의 name = option value ex) 이름=값1 
+	
+3.2 datalist, option
+3.2.1 <datalist></datalist> : input에 연결할 데이터 리스트 컨테이너 id 속성으로 input과 연결. 목표 input을 콤비네이션(text + list)으로 활용
 
+3.2.2 <option></option> : datalist에 포함 될 내용
+3.2.2.1 속성
+	- value : 전송될 값
+	- label : 브라우저에 표시 할 내용
 
+3.2.3 구문
+<input type="text" list="데이터리스트아이디"/>
+<datalist id="데이터리스트아이디">
+	<option value="값" label="표시내용"></option>
+	<option value="값" label="표시내용"></option>
+	...
+</datalist>
 
+3.3 <textarea></textarea> : 메모장처럼 많은 수의 데이터를 입력
+3.3.1 속성
+ 	- col : 가로 크리(문자 단위)
+ 	- row : 세로 크기(줄 단위)
+ 
+4. 기타 양식
+4.1 <button> : 버튼류 표현(<inut type="submit | reset | button">)
+<button type="submit | reset | button(defaul)">버튼문자</button>
+ex>
+<button onclick="windows.open()">새창 열기</button>
+<button type="submit">전송</button>
+<button type="reset">다시 쓰기</button>
 
+4.2 output : 의미상 계산결과를 나타내는 태그(레이블과 비슷)
+
+4.3 progress : 진행상태 표시
+<progress value="값"></progress>
+4.3.1 옵션
+	- value : max가 지정되지 않으면 1.0보다 작은 부동소수점으로 표시 
+	- max : 0보다 큰값으로 표현
+	
+4.4 meter : 값의 크기를 그래픽화 한 것
+<meter value="값"></meter>
+
+4.4.1 속성
+	- max, min : 미 지정시 0, 1
+	- value : 
+	- low : 이 정도면 낮은 값이라 생각되는 값
+	- high : 이 정도면 높은 값이라 생각되는 값
+	- optimum : 적당한 값
 
 
 
