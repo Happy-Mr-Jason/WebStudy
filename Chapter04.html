@@ -43,10 +43,17 @@
 			</fieldset>
 			<fieldset>
 				<legend>수강과목(1과목만 선택 가능)</legend>
-				<select name = "subject">
-					<option value="eng">영어회화</option>
-					<option value="cha">중국어회화</option>
-					<option value="jpn">일어회화</option>
+				<select name = "subject" size="3">
+					<optgroup label="서양">
+						<option value="eng">영어회화</option>
+						<option value="frn">프랑스어회화</option>
+						<option value="spn">스페인어회화</option>
+					</optgroup>
+					<optgroup label="동양">
+						<option value="vet">베트남어회화</option>
+						<option value="cha">중국어회화</option>
+						<option value="jpn">일어회화</option>
+					</optgroup>
 				</select>
 			</fieldset>
 			<input type="submit"/>
