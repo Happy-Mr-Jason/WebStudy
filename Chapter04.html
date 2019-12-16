@@ -43,19 +43,19 @@
 			</fieldset>
 			<fieldset>
 				<legend>수강과목(1과목만 선택 가능)</legend>
-				<ul>
-					<li><label><input type="radio" name="subject" value="eng" />영어회화</label></li>
-					<li><label><input type="radio" name="subject" value="ch" />중국어회화</label></li>
-					<li><label><input type="radio" name="subject" value="jp" />일본어회화</label></li>
-				</ul>
+				<select name = "subject">
+					<option value="eng">영어회화</option>
+					<option value="cha">중국어회화</option>
+					<option value="jpn">일어회화</option>
+				</select>
 			</fieldset>
 			<input type="submit"/>
 		</form>
 		<form method="get" action="test.php">
 			<input type="hidden" name="serial_number" value="123" />
-			<input type="text" name="field1" size="10" maxlength="15" value="00000"/><br />
-			url : <input type="url" /><br />
-			email : <input type="email" /><br />
+			<input type="text" name="field1" size="10" maxlength="15" value="00000" readonly/><br />
+			url : <input type="url" autofocus/><br />
+			email : <input type="email" name="email" placeholder="예)identifier@server.com" /><br />
 			tel : <input type="tel" /><br />
 			수량 : <input type="number" min="1" max="50" step="5"/><br />
 			수량 : <input type="range" min="1" max="50" step="5"/><br />
@@ -68,6 +68,7 @@
 			지역표준시 : <input type="datetime-local" name="datetimelocal"/><br />
 			<input type="image" src="images/Example003.svg" alt="나무야"/><br />
 			<input type="button" value="새창 만들기" onclick="window.open()"/><br />
+			첨부파일<input type="file"/> 
 			
 			<input type="submit" value="보내기"/><input type="reset" value="다시입력"/><br />
 		</form>
