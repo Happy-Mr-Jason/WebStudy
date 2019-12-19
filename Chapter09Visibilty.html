@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<title>Chapter09 Visibility</title>
+	<style>
+		table,tr,th,td{
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+	</style>
+</head>
+
+<body>
+	<img src="images/pic1.jpg">
+	<img src="images/pic2.jpg" style="visibility: hidden;">
+	<img src="images/pic3.jpg">
+
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>번호</th>
+				<th>제목</th>
+				<th>작성자</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>국회는 헌법 또는 법률에 특별한 규정이 없는 한 재적의원 과반수의 출석과 출석의원 과반수의 찬성으로 의결한다. 가부동수인 때에는 부결된 것으로 본다.</td>
+				<td>김시습</td>
+			</tr>
+
+			<tr>
+				<td>2</td>
+				<td>국회는 법률에 저촉되지 아니하는 범위안에서 의사와 내부규율에 관한 규칙을 제정할 수 있다. 이 헌법시행 당시의 대법원장과 대법원판사가 아닌 법관은 제1항 단서의 규정에 불구하고 이
+					헌법에 의하여 임명된 것으로 본다.</td>
+				<td>홍길동</td>
+			</tr>
+
+			<tr style="visibility: collapse;">
+				<td>3</td>
+				<td>환경권의 내용과 행사에 관하여는 법률로 정한다. 헌법재판소의 조직과 운영 기타 필요한 사항은 법률로 정한다. 국회는 정부의 동의없이 정부가 제출한 지출예산 각항의 금액을 증가하거나
+					새 비목을 설치할 수 없다.</td>
+				<td>의천</td>
+			</tr>
+
+			<tr>
+				<td>4</td>
+				<td>대통령은 조약을 체결·비준하고, 외교사절을 신임·접수 또는 파견하며, 선전포고와 강화를 한다. 모든 국민은 법률이 정하는 바에 의하여 납세의 의무를 진다.</td>
+				<td>문종</td>
+			</tr>
+
+			<tr>
+				<td>5</td>
+				<td>모든 국민은 보건에 관하여 국가의 보호를 받는다. 국정감사 및 조사에 관한 절차 기타 필요한 사항은 법률로 정한다. 대통령후보자가 1인일 때에는 그 득표수가 선거권자 총수의 3분의
+					1 이상이 아니면 대통령으로 당선될 수 없다.</td>
+				<td>전봉준</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+</html>
