@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang = "ko">
+<head>
+	<meta charset = "utf-8">
+	<title>Chapter09 Postion</title>
+	<style>
+		.box1{
+			float: left;
+			width: 100px;
+			background: #ffd800;
+			margin-right: 10px;
+			padding: 20px;
+		}
+		.box2{
+			position: relative;
+			left: -50px;
+			top: 30px;
+			width: 300px;
+			background: #0094ff;
+			float:left;
+			padding: 20px;
+		}
+		#wrap{
+			position:relative;
+			left : 200px;
+			top : 200px;
+			width: 300px;
+			height: 300px;
+			border: px solid #ccc;
+		}
+		.box{
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			background: #0094ff;
+		}
+		#crd1{
+			top: 0;
+			left: 0;
+		}
+		#crd2{
+			top: 0;
+			right: 0;
+		}
+		#crd3{
+			bottom: 0;
+			right: 0;
+		}
+		#crd4{
+			bottom: 0;
+			left: 0;
+		}
+		#crd5{
+			top: 100px;
+			left: 100px;
+		}
+		#fx{
+			position: fixed;
+			top: 5px;
+			right: 5px;
+			width: 50px;
+			height: 50px;
+			background: #ff6a00;
+		}
+	</style>
+</head>
+<body>
+	<div class="box1">박스1</div>
+	<div class="box2">박스2</div>
+	<div id="wrap"> 
+		<div class="box" id="crd1"></div>
+		<div class="box" id="crd2"></div>
+		<div class="box" id="crd3"></div>
+		<div class="box" id="crd4"></div>
+		<div class="box" id="crd5"></div>
+	</div>
+	<div id="fx"></div>
+</body>
+
+</html>
