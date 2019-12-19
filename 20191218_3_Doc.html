@@ -14,3 +14,25 @@
     - left : 이전 float:left; 를 해제
     - right : 이전 float:right; 를 해제
     - both : 양쪽 모두 해제
+
+1.4 position : 배치 방법 결정
+    - static : 문서의 흐름대로 배치(default)
+    - relative : 이전 요소에 자연스럽게 연결해 배치하되 위치를 지정할 수 있습니다.
+    - absolute : 원하는 위치에 지정해 배치합니다.
+    - fixed : 지정한 위치에 고정해 배치합니다. 화면에서 요소가 잘릴 수도 있습니다.
+
+1.4.1 left, top : position에 따른 위치 값 모든객체의 기준점은 왼쪽 상단이다
+1.4.2 position : static ==> float에 따른 배치, left, right, top, bottom 속성 사용 불가
+1.4.3 position : relative ==> float에 따른 배치, 기준:float에 의해 배치될 장소
+        left, right, top, bottom 속성 사용 가능(상대적으로 가능)
+        float 상으로의 원래 위치는 존재하지 않으므로 주변 객체가 재정렬 됨
+1.4.4 position : fixed ==> 브라우저 창 좌측상단 기준으로 배치. Scroll되어도 위치는 고정
+        float 상으로의 원래 위치는 존재하지 않으므로 주변 객체가 재정렬 됨
+
+1.5 visibility : 보이거나 보이지 않게
+    - visible : 보이기
+    - hidden : 감추기, 위치(공간)는 남아 있음
+    - collapse : 표의 행,열 감추기, 그외 객체는 hidden과 동일
+
+1.6 z-index : 겹치는 순서
+    낮을수록 아래쪽에, 클수록 위쪽에 상대적으로 겹침
